@@ -4,12 +4,9 @@
       <meta charset="UTF-8">
       <title>마한끄투 도메인 이전</title>
       <script>
-          const paramValue = window.location.pathname.split('/').pop();
-          const redirectUrl = `https://mahan.my/${paramValue}`;
-          window.location.replace(redirectUrl);
+        const paramValue = window.location.pathname.split('/').pop();
+        const redirectUrl = paramValue ? `https://mahan.my/${paramValue}` : 'https://mahan.my/';
+        window.location.replace(redirectUrl);
       </script>
   </head>
-  <body>
-    <h1>이 글자가 보이신다면 잠시 뒤 이동됩니다.</h1>
-  </body>
 </html>
