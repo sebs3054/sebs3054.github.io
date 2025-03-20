@@ -1,6 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
   <head>
-    <title>마한끄투 도메인 이전</title>
-    <meta http-equiv="refresh" content="0; url=https://mahan.my/">
+      <meta charset="UTF-8">
+      <title>마한끄투 도메인 이전</title>
+      <script>
+          const paramValue = window.location.pathname.split('/').pop();
+          const redirectUrl = `https://mahan.my/${paramValue}`;
+          window.location.replace(redirectUrl);
+      </script>
   </head>
 </html>
