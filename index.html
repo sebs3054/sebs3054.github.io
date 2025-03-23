@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="google-site-verification" content="QaBLNBvivLHLGYo_HQweYEG04aHl1phOC6dnVW3fgUM" />
-      <title>마한끄투 도메인 이전</title>
-      <script>
-        const paramValue = window.location.pathname.split('/').pop();
-        const redirectUrl = paramValue ? `https://mahan.my/${paramValue}` : 'https://mahan.my/';
-        window.location.replace(redirectUrl);
-      </script>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="QaBLNBvivLHLGYo_HQweYEG04aHl1phOC6dnVW3fgUM" />
+    <title>마한끄투 도메인 이전</title>
+    <script>
+        const currentPath = window.location.pathname;
+        const paramValue = currentPath.split('/').pop();
+
+        // '/servers' 요청 처리
+        if (currentPath === '/servers') {
+            window.location.replace('https://mahan.my/servers');
+        } else {
+            const redirectUrl = paramValue ? `https://mahan.my/${paramValue}` : 'https://mahan.my/';
+            window.location.replace(redirectUrl);
+        }
+    </script>
+</head>
+<body>
+    <h1>이 페이지는 자동으로 리다이렉트됩니다.</h1>
+</body>
 </html>
