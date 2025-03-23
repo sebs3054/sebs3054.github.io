@@ -2,16 +2,17 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        
     </head>
     <body>
-        <script>
-            fetch('https://mahan.my/servers')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('server-data').innerText = JSON.stringify(data);
-                });
-        </script>
         <div id="server-data"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                fetch('https://mahan.my/servers')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('server-data').innerText = JSON.stringify(data);
+                    });
+            });
+        </script>
     </body>
 </html>
