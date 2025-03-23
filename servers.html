@@ -2,7 +2,17 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>마한끄투 도메인 이전</title>
-        <meta http-equiv="refresh" content="0; url=https://mahan.my/servers">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+    <body>
+        <h1>서버 데이터</h1>
+        <div id="server-data"></div>
+        <script>
+            fetch('https://mahan.my/servers')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('server-data').innerText = JSON.stringify(data);
+                });
+        </script>
+    </body>
 </html>
