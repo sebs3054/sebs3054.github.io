@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <div id="server-data"></div>
+        <pre id="server-data"></pre>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 fetch('https://mahan.my/servers')
                     .then(response => response.json())
                     .then(data => {
-                        document.getElementById('server-data').innerText = JSON.stringify(data);
+                        document.getElementById('server-data').innerHTML = JSON.stringify(data);
                     });
             });
         </script>
