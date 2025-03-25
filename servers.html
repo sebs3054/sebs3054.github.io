@@ -7,7 +7,7 @@
         <pre id="server-data"></pre>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                fetch('https://mahan.my/servers')
+                fetch('https://mahan.pe.kr/servers')
                     .then(response => response.json())
                     .then(data => {
                         document.getElementById('server-data').innerHTML = JSON.stringify(data);
